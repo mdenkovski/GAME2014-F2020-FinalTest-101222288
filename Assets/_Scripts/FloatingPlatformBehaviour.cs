@@ -61,11 +61,11 @@ public class FloatingPlatformBehaviour : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
         Segment1.SetActive(false);
         Segment5.SetActive(false);
-        boxCollider.size.Set(3.0f, 2.0f);
+        boxCollider.size = new Vector2(3.0f, 2.0f);
         yield return new WaitForSeconds(2.0f);
         Segment2.SetActive(false);
         Segment4.SetActive(false);
-        boxCollider.size.Set(1.0f, 2.0f);
+        boxCollider.size = new Vector2(1.0f, 2.0f);
         yield return new WaitForSeconds(2.0f);
         Segment3.SetActive(false);
         boxCollider.enabled = false;
@@ -85,7 +85,7 @@ public class FloatingPlatformBehaviour : MonoBehaviour
     {
         yield return new WaitForSeconds(2.0f);
         boxCollider.enabled = true;
-        boxCollider.size.Set(5.0f, 2.0f);
+        boxCollider.size = new Vector2(5.0f, 2.0f);
         Segment1.SetActive(true);
         Segment2.SetActive(true);
         Segment3.SetActive(true);

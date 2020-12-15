@@ -18,6 +18,15 @@ public enum ImpulseSounds
     GEM
 }
 
+/// <summary>
+/// PlayerBehaviour.cs
+/// Michael Denkovski 101222288
+/// Last Edit Dec 15, 2020
+/// controlls the player
+/// - added shrinking platform activation on collision
+/// - added shrinking platform reset on collision exit
+/// </summary>
+
 public class PlayerBehaviour : MonoBehaviour
 {
     [Header("Controls")]

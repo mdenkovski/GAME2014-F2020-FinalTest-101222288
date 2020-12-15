@@ -8,6 +8,8 @@ using UnityEngine;
 /// Last Edit Dec 15, 2020
 /// Script that moves the platform up and down slightly and will cause the platform to shrink when the player gets on it
 /// - added floating behaviour between 2 points
+/// - added shrinking behaviour and resetting
+/// - added sound effects on shrink and on reset
 /// </summary>
 public class FloatingPlatformBehaviour : MonoBehaviour
 {

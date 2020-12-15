@@ -46,6 +46,9 @@ public class FloatingPlatformBehaviour : MonoBehaviour
         _Float();
     }
 
+    /// <summary>
+    /// float back and forth between the two start and end points
+    /// </summary>
     private void _Float()
     {
         var distanceX = (distance.x > 0) ? start.position.x + Mathf.PingPong(Time.time*0.5f, distance.x) : start.position.x;
@@ -54,6 +57,9 @@ public class FloatingPlatformBehaviour : MonoBehaviour
         transform.position = new Vector3(distanceX, distanceY, 0.0f);
     }
 
+    /// <summary>
+    /// initiate the shrinking coroutine
+    /// </summary>
     public void StartShrinking()
     {
         
@@ -82,6 +88,9 @@ public class FloatingPlatformBehaviour : MonoBehaviour
         boxCollider.enabled = false;
     }
 
+    /// <summary>
+    /// stop shrinking if still happening and initiate restoration coroutine
+    /// </summary>
     public void ResetPlatform()
     {
         //check if the shrinking routine is already happening and stop it if it is
@@ -101,6 +110,7 @@ public class FloatingPlatformBehaviour : MonoBehaviour
             resettingSound.Play();
 
         }
+        //re-enable all the segments that were deactivated
         boxCollider.enabled = true;
         boxCollider.size = new Vector2(5.0f, 2.0f);
         Segment1.SetActive(true);

@@ -40,8 +40,8 @@ public class FloatingPlatformBehaviour : MonoBehaviour
 
     private void _Float()
     {
-        var distanceX = (distance.x > 0) ? start.position.x + Mathf.PingPong(Time.time, distance.x) : start.position.x;
-        var distanceY = (distance.y > 0) ? start.position.y + Mathf.PingPong(Time.time, distance.y) : start.position.y;
+        var distanceX = (distance.x > 0) ? start.position.x + Mathf.PingPong(Time.time*0.5f, distance.x) : start.position.x;
+        var distanceY = (distance.y > 0) ? start.position.y + Mathf.PingPong(Time.time * 0.5f, distance.y) : start.position.y;
 
         transform.position = new Vector3(distanceX, distanceY, 0.0f);
     }
